@@ -1,8 +1,30 @@
+    nav {
+        background-color: rgb(113, 151, 184);
+        display: flex;
+    }
 
-  .icons {
+    .links {
+        text-align: right;
+        color: black;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 15px;
+    }
+
+    #searchMovie {
+
+    }
+    .icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 10%;
+        padding: 2%;
+    }
+
+  .icons a {
     display: flex;
+    flex-direction: row;
     background: none;
-    left: 35%;
     font-size: 400%;
     color: #1ac014;
     margin: 0px 20px;
