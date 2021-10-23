@@ -31,11 +31,15 @@
 
        <div>
               <h1 class="md:container mx-8 my-8 "> About our App</h1>
-              <p class="md:container mx-8 my-8"></p>
        </div>
 
-       <input class="bg-gray-200 focus:bg-white mx-4 my-4" id="movieName" placeholder="search movie title"></input>
-       <button id="searchMovie">search</button>
+       <nav class="navbar navbar-light bg-light justify-content-between">
+              <form class="form-inline">
+                     <input class="bg-gray-200 focus:bg-white mx-4 my-4" id="movieName" placeholder="Search Movie Title"></input>
+                     <button class="btn btn-outline-success" type="button" id="searchMovie" type="submit">Search</button>
+              </form>
+       </nav>
+
        <div id="result" class="empty"></div>
 
        <footer class="md:container bg-gradient-to-r from-green-400 to-blue-500 my-4 mx-auto">

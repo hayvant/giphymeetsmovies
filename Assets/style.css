@@ -4,7 +4,7 @@
     }
 
     .links {
-        text-align: right;
+        float: right !important;
         color: black;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         margin: 15px;
@@ -13,6 +13,16 @@
     #searchMovie {
 
     }
+
+    #result {
+        background-color: #79ca76;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .class {
+
+    }
+
     .icons {
         display: flex;
         flex-direction: row;
