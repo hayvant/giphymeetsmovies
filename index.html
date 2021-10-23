@@ -7,32 +7,34 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="Description" content="Enter your description here" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./Assets/style.css">
   <title>Find Information About Your Movie</title>
 </head>
+<body class="bg-gray-300">
+    
 
-<header>
-Welcome to the Movies List 
-<img src=""/>
-</header>
+
+<header class="md:container bg-gradient-to-r from-green-400 to-blue-500 my-4 mx-auto">Welcome to the Movies List</header>
 <div>
-    <h1> About our App</h1>
-    <p> mmmmmmmmm</p>
+    <h1 class="md:container mx-8 my-8 "> About our App</h1>
+    <p class="md:container mx-8 my-8"> mmmmmmmmm</p>
 </div>
 
 
-<body>
-    <input id="movieName"></input>
-    <button id="searchMovie"></button>
+
+    <input class="bg-gray-200 focus:bg-white mx-4 my-4" id="movieName" placeholder="search movie title"></input>
+    <button id="searchMovie">search</button>
     <div id="result"></div>
-    </section>
- <footer>
+    
+ <footer class="md:container bg-gradient-to-r from-green-400 to-blue-500 my-4 mx-auto">
         <div>About Us</div>
         <div> Contact Us</div>
         <div> Feedback</div>
  </footer>
-</body>
+
  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
  <script src="./Assets/script.js"></script>
+</body>
 </html>
