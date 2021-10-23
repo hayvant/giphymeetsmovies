@@ -1,14 +1,22 @@
     nav {
         background-color: rgb(113, 151, 184);
-        text-align: end;
+        display: flex;
+    }
+
+    .links {
+        text-align: right;
         color: black;
-        padding: 5%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 15px;
     }
+
     #searchMovie {
-     
+
     }
-    footer a {
-        text-align: center;
+    .icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
         margin: 10%;
         padding: 2%;
     }
