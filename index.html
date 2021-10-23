@@ -20,20 +20,28 @@
               Welcome to the Movies List
        </header>
 
-       <nav>
-              <ul class="links">
-              <a href="./landing_page.html"><button type="button">Home Page</button></a>
-              <a href="aboutus">About Us</a>
-              <a href="contactus"> Contact Us</a>
-              <a href=" feedback"> Feedback</a>
-              </ul>
+       <nav class="justify-content-end">
+              <ul class="nav">
+                     <li class="nav-item">
+                     <a class="nav-link active" href="./landing_page.html">Home Page</a>
+                     </li>
+                     <li class="nav-item">
+                     <a class="nav-link" href="#">About Us</a>
+                     </li>
+                     <li class="nav-item">
+                     <a class="nav-link" href="#">Contact Us</a>
+                     </li>
+                     <li class="nav-item">
+                     <a class="nav-link" href="#">Feedback</a>
+                     </li>
+              </ul> 
        </nav>
 
        <div>
               <h1 class="md:container mx-8 my-8 "> About our App</h1>
        </div>
 
-       <nav class="navbar navbar-light bg-light justify-content-between">
+       <nav class="navbar navbar-light bg-light justify-content-center">
               <form class="form-inline">
                      <input class="bg-gray-200 focus:bg-white mx-4 my-4" id="movieName" placeholder="Search Movie Title"></input>
                      <button class="btn btn-outline-success" type="button" id="searchMovie" type="submit">Search</button>
