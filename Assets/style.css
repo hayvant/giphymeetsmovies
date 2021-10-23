@@ -1,8 +1,22 @@
+    nav {
+        background-color: rgb(113, 151, 184);
+        text-align: end;
+        color: black;
+        padding: 5%;
+    }
+    #searchMovie {
+     
+    }
+    footer a {
+        text-align: center;
+        margin: 10%;
+        padding: 2%;
+    }
 
-  .icons {
+  .icons a {
     display: flex;
+    flex-direction: row;
     background: none;
-    left: 35%;
     font-size: 400%;
     color: #1ac014;
     margin: 0px 20px;
