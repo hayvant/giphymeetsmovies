@@ -1,4 +1,4 @@
-# Across the Marvel Cinematic Universe
+# Movies meet Giphy
 
 > Our group worked collaboratively to create a website that will run in the browser and feature dynamically updated HTML, CSS, and Javascript. This project uses development methodologies and implement feature and bug fixes using git branch workflow and pull requests. We have conceived and execute a design that solves a real-world problem by integrating data received from multiple server-side API requests. 
 
@@ -21,8 +21,8 @@
 ----------------------------------------------------------------------------------------------------------------
 
 
-> Deploy Link: [Across the MCU](https://hayvant.github.io/acrosstheMCU/)
+> Deploy Link: [Giphy meets Movies](https://hayvant.github.io/acrosstheMCU/)
 
 
-![Across the MCU screenshot](-------)
+![Giphy meets Movies screenshot](-------)
 
