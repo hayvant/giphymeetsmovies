@@ -1,21 +1,24 @@
-let searchEl = $('movieName').val()
+let searchEl = $('#movieName')
 
 
 
 $('#searchMovie').on('click', function () {
 
     $.ajax({
-        url: 'http://www.omdbapi.com/?apikey=25ec969f&t=' + searchEl
+        url: 'http://www.omdbapi.com/?apikey=25ec969f&t=' + searchEl.val()
     }).then(function (data) {
+
+        $('.empty').empty()
+        
         console.log('movie data??', data)
 
         let title = data.Title
-        console.log('title??', title)
         let year = data.Year
-        console.log('year??', year)
         let actors = data.Actors
-        console.log('actors??', actors)
 
+        $('#result').append('Title: ' + title)
+        $('#result').append('Year it was released: ' + year)
+        $('#result').append('Main actors/actresses: ' + actors)
 
     })
 })
