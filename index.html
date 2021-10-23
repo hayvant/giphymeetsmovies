@@ -2,39 +2,59 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="Description" content="Enter your description here" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./Assets/style.css">
-  <title>Find Information About Your Movie</title>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+       <meta name="Description" content="Enter your description here" />
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+       <link rel="shortcut icon" type="img/jpg" href="./images/bobines-video-icon.png"/>
+       <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+       <script src="https://kit.fontawesome.com/f682582b79.js" crossorigin="anonymous"></script>
+       <link rel="stylesheet" href="./Assets/style.css">
+       <title>Find Information About Your Movie</title>
 </head>
+
 <body class="bg-gray-300">
-    
 
+       <header class="md:container bg-gradient-to-r font-bold from-green-400 text-4xl text-center to-blue-500 my-4 mx-auto">
+              Welcome to the Movies List
+       </header>
 
-<header class="md:container bg-gradient-to-r font-bold from-green-400 text-4xl text-center to-blue-500 my-4 mx-auto">Welcome to the Movies List</header>
-<div>
-    <h1 class="md:container mx-8 my-8 "> About our App</h1>
-    <p class="md:container mx-8 my-8"> mmmmmmmmm</p>
-</div>
+       <nav>
+              <ul class="links">
+              <a href="./landing_page.html"><button type="button">Home Page</button></a>
+              <a href="aboutus">About Us</a>
+              <a href="contactus"> Contact Us</a>
+              <a href=" feedback"> Feedback</a>
+              </ul>
+       </nav>
 
+       <div>
+              <h1 class="md:container mx-8 my-8 "> About our App</h1>
+              <p class="md:container mx-8 my-8"></p>
+       </div>
 
+       <input class="bg-gray-200 focus:bg-white mx-4 my-4" id="movieName" placeholder="search movie title"></input>
+       <button id="searchMovie">search</button>
+       <div id="result" class="empty"></div>
 
-    <input class="bg-gray-200 focus:bg-white mx-4 my-4" id="movieName" placeholder="search movie title"></input>
-    <button id="searchMovie">search</button>
-    <div id="result" class="empty"></div>
-    
- <footer class="md:container bg-gradient-to-r from-green-400 to-blue-500 my-4 mx-auto">
-        <div>About Us</div>
-        <div> Contact Us</div>
-        <div> Feedback</div>
- </footer>
+       <footer class="md:container bg-gradient-to-r from-green-400 to-blue-500 my-4 mx-auto">
 
- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
- <script src="./Assets/script.js"></script>
+              <p class="icons">
+                     <a href="https://www.instagram.com/rottentomatoes/" i class="fab fa-instagram"><span>Rotten
+                                   Tomatoes Instagram</span></a>
+                     <br>
+                     <a href="https://www.rottentomatoes.com/" i class="fa-solid fa-tomato"><span>Rotten Tomatoes Movie
+                                   Reviews</span></a>
+                     <br>
+                     <a href="https://github.com/hayvant/giphymeetsmovies" i
+                            class="fab fa-github"><span>Github</span></a>
+              </p>
+       </footer>
+
+       <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+              integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+       <script src="./Assets/script.js"></script>
 </body>
+
 </html>
