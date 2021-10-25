@@ -21,7 +21,7 @@
 ----------------------------------------------------------------------------------------------------------------
 
 
-> Deploy Link: [Giphy meets Movies](https://hayvant.github.io/acrosstheMCU/)
+> Deploy Link: [Giphy meets Movies](https://hayvant.github.io/giphymeetsmovies/)
 
 
 ![Giphy meets Movies screenshot](-------)
