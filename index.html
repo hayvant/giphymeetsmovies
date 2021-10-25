@@ -15,6 +15,18 @@
 
 <body class="bg-gray-300">
 
+       <header class="md:container bg-gradient-to-r font-bold from-green-400 text-4xl text-center to-blue-500 my-4 mx-auto">
+              Welcome to the Movies List
+       </header>
+
+       <nav>
+              <ul class="links">
+              <a href="./landing_page.html"><button type="button">Home Page</button></a>
+              <a href="aboutus">About Us</a>
+              <a href="contactus"> Contact Us</a>
+              <a href=" feedback"> Feedback</a>
+              </ul>
+       </nav>
 
 
        <header
@@ -25,7 +37,14 @@
               <p class="md:container mx-8 my-8"> mmmmmmmmm</p>
        </div>
 
+       <nav class="navbar navbar-light bg-light justify-content-between">
+              <form class="form-inline">
+                     <input class="bg-gray-200 focus:bg-white mx-4 my-4" id="movieName" placeholder="Search Movie Title"></input>
+                     <button class="btn btn-outline-success" type="button" id="searchMovie" type="submit">Search</button>
+              </form>
+       </nav>
 
+       <div id="result" class="empty"></div>
 
        <input class="bg-gray-200 focus:bg-white mx-4 my-4" id="movieName" placeholder="search movie title"></input>
        <button id="searchMovie">search</button>
