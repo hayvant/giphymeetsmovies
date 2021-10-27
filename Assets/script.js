@@ -16,21 +16,21 @@ $('#searchMovie').on('click', function () {
         let year = response.Year
         let actors = response.Actors
 
-        $('#movieTitle').text('Title: ' + title)
-        $('#movieYear').text('Year it was released: ' + year)
-        $('#moviePeople').text('Main actors/actresses: ' + actors)
+        $('#movieTitle').text(title)
+        $('#movieYear').text('Released in ' + year)
+        $('#moviePeople').text('Main actors/actresses are ' + actors)
 
         getGiphy()
         getStorage()
     })
 })
 
-$('#searchMovie').keypress(function (event) {
-    if (event.keyCode == 13 && searchEl.val()) {
-        event.preventDefault()
-        $('#searchMovie').click();
-    }
-})
+// $('#searchMovie').keypress(function (event) {
+//     if (event.keyCode == 13 && searchEl.val()) {
+//         event.preventDefault()
+//         $('#searchMovie').click();
+//     }
+// })
 
 function getGiphy() {
 
