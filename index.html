@@ -6,8 +6,9 @@
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <meta http-equiv="X-UA-Compatible" content="ie=edge">
        <meta name="Description" content="Enter your description here" />
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-       <link rel="shortcut icon" type="img/jpg" href="./images/bobines-video-icon.png"/>
+       <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+       <link rel="shortcut icon" type="img/jpg" href="./images/bobines-video-icon.png" />
        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
        <script src="https://kit.fontawesome.com/f682582b79.js" crossorigin="anonymous"></script>
        <link rel="stylesheet" href="./Assets/style.css">
@@ -16,16 +17,17 @@
 
 <body class="bg-gray-300">
 
-       <header class="md:container bg-gradient-to-r font-bold from-green-400 text-4xl text-center to-blue-500 my-4 mx-auto">
+       <header
+              class="md:container bg-gradient-to-r font-bold from-green-400 text-4xl text-center to-blue-500 my-4 mx-auto">
               Welcome to the Movies List
        </header>
 
        <nav>
               <ul class="links">
-              <a href="./landing_page.html"><button type="button">Home Page</button></a>
-              <a href="aboutus">About Us</a>
-              <a href="contactus"> Contact Us</a>
-              <a href=" feedback"> Feedback</a>
+                     <a href="./landing_page.html"><button type="button">Home Page</button></a>
+                     <a href="aboutus">About Us</a>
+                     <a href="contactus"> Contact Us</a>
+                     <a href=" feedback"> Feedback</a>
               </ul>
        </nav>
 
@@ -35,12 +37,19 @@
 
        <nav class="navbar navbar-light bg-light justify-content-between">
               <form class="form-inline">
-                     <input class="bg-gray-200 focus:bg-white mx-4 my-4" id="movieName" placeholder="Search Movie Title"></input>
-                     <button class="btn btn-outline-success" type="button" id="searchMovie" type="submit">Search</button>
+                     <input class="bg-gray-200 focus:bg-white mx-4 my-4" id="movieName"
+                            placeholder="Search Movie Title"></input>
+                     <button class="btn btn-outline-success" type="button" id="searchMovie"
+                            type="submit">Search</button>
               </form>
        </nav>
 
-       <div id="result" class="empty"></div>
+       <div id="movieTitle" class="empty"></div>
+       <div id="movieYear" class="empty"></div>
+       <div id="moviePeople" class="empty"></div>
+       <img id="movieGif" class="empty">
+       <div id="movieStorage" class="empty"></div>
+
 
        <footer class="md:container bg-gradient-to-r from-green-400 to-blue-500 my-4 mx-auto">
 

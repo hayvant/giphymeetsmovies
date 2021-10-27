@@ -1,9 +1,13 @@
-let searchEl = $('#movieName')
+const searchEl = $('#movieName')
+const movieApi = '25ec969f'
+const gifApi = 'Yra79OxqQFHvDTCxC6nGYUJfeNW8hjuK'
+
+
 
 $('#searchMovie').on('click', function () {
 
     $.ajax({
-        url: 'http://www.omdbapi.com/?apikey=25ec969f&t=' + searchEl.val()
+        url: 'https://www.omdbapi.com/?apikey=' + movieApi + '&t=' + searchEl.val()
     }).then(function (response) {
 
         $('.empty').empty()
@@ -11,28 +15,48 @@ $('#searchMovie').on('click', function () {
         let title = response.Title
         let year = response.Year
         let actors = response.Actors
-        let genre = response.Genre
 
-        $('#result').append('Title: ' + title)
-        $('#result').append('Year it was released: ' + year)
-        $('#result').append('Main actors/actresses: ' + actors)
+        $('#movieTitle').text('Title: ' + title)
+        $('#movieYear').text('Year it was released: ' + year)
+        $('#moviePeople').text('Main actors/actresses: ' + actors)
 
+        getGiphy()
+        getStorage()
     })
-    getGiphy()
 })
 
-function getGiphy(genre) {
+$('#searchMovie').keypress(function (event) {
+    if (event.keyCode == 13 && searchEl.val()) {
+        event.preventDefault()
+        $('#searchMovie').click();
+    }
+})
+
+function getGiphy() {
 
     $.ajax({
-        url: 'https://api.giphy.com/v1/gifs/search?api_key=Yra79OxqQFHvDTCxC6nGYUJfeNW8hjuK&q=scary&limit=25&offset=0&rating=pg-13&lang=en'
+        url: 'https://api.giphy.com/v1/gifs/random?api_key=' + gifApi + '&tag=' + searchEl.val() + '&limit=1&lang=en'
     }).then(function (response) {
-        console.log('giphy data??', response)
-        console.log('scary gif??', response.data[0].bitly_url)
 
-        let gifDiv = $('<img/>')
-        let gif = response.data[0].bitly_url
-        $(gifDiv).attr('src', gif)
-        $('#result').append(gifDiv)
-        
+        let gif = response.data.images.original.url
+        $('#movieGif').attr('src', gif)
     })
+}
+
+function getStorage() {
+
+    let searchLowered = searchEl.val().toLowerCase()
+
+    let movieArray = JSON.parse(localStorage.getItem('movies')) || []
+    if (movieArray.includes(searchLowered) === false) {
+        movieArray.push(searchLowered)
+    }
+    localStorage.setItem('movies', (JSON.stringify(movieArray)))
+
+    for (let i = 0; i < movieArray.length; i++) {
+
+        let savedMovie = $('<p>')
+        $(savedMovie).text(movieArray[i])
+        $('#movieStorage').append(savedMovie)
+    }
 }
