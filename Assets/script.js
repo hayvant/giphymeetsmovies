@@ -25,12 +25,12 @@ $('#searchMovie').on('click', function () {
     })
 })
 
-// $('#searchMovie').keypress(function (event) {
-//     if (event.keyCode == 13 && searchEl.val()) {
-//         event.preventDefault()
-//         $('#searchMovie').click();
-//     }
-// })
+$('#movieName').keypress(function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault()
+        $('#searchMovie').click();
+    }
+})
 
 function getGiphy() {
 
