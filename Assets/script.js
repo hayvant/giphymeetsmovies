@@ -6,23 +6,7 @@ const gifApi = 'Yra79OxqQFHvDTCxC6nGYUJfeNW8hjuK'
 
 $('#searchMovie').on('click', function () {
 
-    $.ajax({
-        url: 'https://www.omdbapi.com/?apikey=' + movieApi + '&t=' + searchEl.val()
-    }).then(function (response) {
-
-        $('.empty').empty()
-
-        let title = response.Title
-        let year = response.Year
-        let actors = response.Actors
-
-        $('#movieTitle').text(title)
-        $('#movieYear').text('Released in ' + year)
-        $('#moviePeople').text('Main actors/actresses are ' + actors)
-
-        getGiphy()
-        getStorage()
-    })
+    getMovie(searchEl.val())
 })
 
 $('#movieName').keypress(function (event) {
@@ -31,6 +15,38 @@ $('#movieName').keypress(function (event) {
         $('#searchMovie').click();
     }
 })
+
+function getMovie(movie) {
+
+    $.ajax({
+        url: 'https://www.omdbapi.com/?apikey=' + movieApi + '&t=' + movie
+    }).then(function (response) {
+
+        $('.empty').empty()
+
+        let title = response.Title
+        let year = response.Year
+        let actors = response.Actors
+
+        if (title == undefined || year == undefined) {
+
+            $('#movieTitle').text('Oops! That movie does not exist. Try again!')
+            $('#movieYear').text('')
+            $('#moviePeople').text('')
+            $('#movieGif').attr('src', './images/static.png')
+
+        } else {
+
+            $('#movieTitle').text(title)
+            $('#movieYear').text('Released in ' + year)
+            $('#moviePeople').text('Main cast members are ' + actors)
+
+            getGiphy()
+            getStorage()
+        }
+    })
+
+}
 
 function getGiphy() {
 
