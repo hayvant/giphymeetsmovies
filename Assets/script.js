@@ -7,6 +7,7 @@ const gifApi = 'Yra79OxqQFHvDTCxC6nGYUJfeNW8hjuK'
 $('#searchMovie').on('click', function () {
 
     getMovie(searchEl.val())
+    getGiphy(searchEl.val())
 })
 
 $('#movieName').keypress(function (event) {
@@ -14,6 +15,12 @@ $('#movieName').keypress(function (event) {
         event.preventDefault()
         $('#searchMovie').click();
     }
+})
+
+$(document).on('click', '.storedMovies', function () {
+
+    getMovie($(this).text())
+    getGiphy($(this).text())
 })
 
 function getMovie(movie) {
@@ -41,17 +48,16 @@ function getMovie(movie) {
             $('#movieYear').text('Released in ' + year)
             $('#moviePeople').text('Main cast members are ' + actors)
 
-            getGiphy()
             getStorage()
         }
     })
 
 }
 
-function getGiphy() {
+function getGiphy(gif) {
 
     $.ajax({
-        url: 'https://api.giphy.com/v1/gifs/random?api_key=' + gifApi + '&tag=' + searchEl.val() + '&limit=1&lang=en'
+        url: 'https://api.giphy.com/v1/gifs/random?api_key=' + gifApi + '&tag=' + gif + '&limit=1&lang=en'
     }).then(function (response) {
 
         let gif = response.data.images.original.url
@@ -74,6 +80,7 @@ function getStorage() {
     for (let i = 0; i < movieArray.length; i++) {
 
         let savedMovie = $('<button>')
+        $(savedMovie).attr('class', 'storedMovies bg-gray-400 mx-1 my-0.5 rounded-sm')
         $(savedMovie).text(movieArray[i])
         $('#movieStorage').append(savedMovie)
     }
