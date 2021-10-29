@@ -59,6 +59,13 @@ function getGiphy() {
     })
 }
 
+const reloadtButton = document.querySelector("#reload");
+function reload() {
+    reload = location.reload();
+}
+
+reloadButton.addEventListener("click", reload, false);
+
 function getStorage() {
 
     let searchLowered = searchEl.val().toLowerCase()
