@@ -16,6 +16,12 @@ $('#movieName').keypress(function (event) {
     }
 })
 
+$(document).on('click', '.storedMovies', function () {
+
+    getMovie($(this).val())
+    console.log('stored movies clicked!!', ($(this).val()))
+})
+
 function getMovie(movie) {
 
     $.ajax({
@@ -74,6 +80,7 @@ function getStorage() {
     for (let i = 0; i < movieArray.length; i++) {
 
         let savedMovie = $('<button>')
+        $(savedMovie).attr('class', 'storedMovies bg-gray-400 mx-1 my-0.5 rounded-sm')
         $(savedMovie).text(movieArray[i])
         $('#movieStorage').append(savedMovie)
     }
