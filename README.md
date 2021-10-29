@@ -4,9 +4,10 @@
 
 -------------------------------------------------------------------------------------------------------------
 ## Pitch:
-> A one minute description of your application.
+> Welcome all movie buffs! Do you have a passionate interest in cinema and giphys? You’ve come to the right place! Search your favorite movies and our application database will obtain the movie information and generate a short looping- a giphy to match it!
 > Concept: What is your user story? What was your motivation for development?
-> Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
+> Process: The technologies that we used to create this website were HTML, Bootstrap, Tailwind, Javascript, and Jquery.
+> How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
 --------------------------------------------------------------------------------------------------------------------
 ## This website has met the following requirements:
 

@@ -60,3 +60,5 @@ function getStorage() {
         $('#movieStorage').append(savedMovie)
     }
 }
+
+// tailwind.config.js
