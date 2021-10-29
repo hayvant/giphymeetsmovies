@@ -6,8 +6,20 @@ const gifApi = 'Yra79OxqQFHvDTCxC6nGYUJfeNW8hjuK'
 
 $('#searchMovie').on('click', function () {
 
+    getMovie(searchEl.val())
+})
+
+$('#movieName').keypress(function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault()
+        $('#searchMovie').click();
+    }
+})
+
+function getMovie(movie) {
+
     $.ajax({
-        url: 'https://www.omdbapi.com/?apikey=' + movieApi + '&t=' + searchEl.val()
+        url: 'https://www.omdbapi.com/?apikey=' + movieApi + '&t=' + movie
     }).then(function (response) {
 
         $('.empty').empty()
@@ -16,21 +28,25 @@ $('#searchMovie').on('click', function () {
         let year = response.Year
         let actors = response.Actors
 
-        $('#movieTitle').text(title)
-        $('#movieYear').text('Released in ' + year)
-        $('#moviePeople').text('Main actors/actresses are ' + actors)
+        if (title == undefined || year == undefined) {
 
-        getGiphy()
-        getStorage()
+            $('#movieTitle').text('Oops! That movie does not exist. Try again!')
+            $('#movieYear').text('')
+            $('#moviePeople').text('')
+            $('#movieGif').attr('src', './images/oops.gif')
+
+        } else {
+
+            $('#movieTitle').text(title)
+            $('#movieYear').text('Released in ' + year)
+            $('#moviePeople').text('Main cast members are ' + actors)
+
+            getGiphy()
+            getStorage()
+        }
     })
-})
 
-// $('#searchMovie').keypress(function (event) {
-//     if (event.keyCode == 13 && searchEl.val()) {
-//         event.preventDefault()
-//         $('#searchMovie').click();
-//     }
-// })
+}
 
 function getGiphy() {
 
@@ -60,5 +76,3 @@ function getStorage() {
         $('#movieStorage').append(savedMovie)
     }
 }
-
-// tailwind.config.js
