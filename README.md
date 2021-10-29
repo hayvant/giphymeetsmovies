@@ -24,5 +24,8 @@
 > Deploy Link: [Giphy meets Movies](https://hayvant.github.io/giphymeetsmovies/)
 
 
-![Giphy meets Movies screenshot](-------)
+![Giphy meets Movies screenshot](https://user-images.githubusercontent.com/89271807/139503807-58fab0d3-4d74-4965-9b46-890ed0e9d4bc.png)
 
+![2021-10-29](https://user-images.githubusercontent.com/89271807/139503857-2da857af-a61e-4df3-8c61-038bb91cea40.png)
+
+![2021-10-29 (7)](https://user-images.githubusercontent.com/89271807/139503862-aec4b95f-a5e3-4f3e-bb12-4db54512decc.png)
