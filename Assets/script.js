@@ -33,7 +33,7 @@ function getMovie(movie) {
             $('#movieTitle').text('Oops! That movie does not exist. Try again!')
             $('#movieYear').text('')
             $('#moviePeople').text('')
-            $('#movieGif').attr('src', './images/static.png')
+            $('#movieGif').attr('src', './images/oops.gif')
 
         } else {
 
