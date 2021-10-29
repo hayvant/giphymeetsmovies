@@ -61,6 +61,8 @@ function getGiphy() {
 
 function getStorage() {
 
+    $('.empty').empty()
+
     let searchLowered = searchEl.val().toLowerCase()
 
     let movieArray = JSON.parse(localStorage.getItem('movies')) || []
@@ -71,7 +73,8 @@ function getStorage() {
 
     for (let i = 0; i < movieArray.length; i++) {
 
-        let savedMovie = $('<p>')
+        let savedMovie = $('<button>')
+        $(savedMovie).attr('class', 'bg-gray-400 mx-1 my-0.5 rounded-sm ')
         $(savedMovie).text(movieArray[i])
         $('#movieStorage').append(savedMovie)
     }
