@@ -65,6 +65,13 @@ function getGiphy(gif) {
     })
 }
 
+const reloadtButton = document.querySelector("#reload");
+function reload() {
+    reload = location.reload();
+}
+
+reloadButton.addEventListener("click", reload, false);
+
 function getStorage() {
 
     $('.empty').empty()

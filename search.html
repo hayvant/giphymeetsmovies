@@ -8,69 +8,68 @@
        <meta name="Description" content="Enter your description here" />
        <link rel="stylesheet"
               href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+       <link rel="icon" type="image/x-icon" href="./images/bobines-video-icon.png">
        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-       <title>Find Information About Your Movie</title>
+       <title>Movie meets Giphy!</title>
 </head>
 
-<body class="bg-white">
+<body class="bg-gray-300">
        
-       <header class="full:container font-extrabold text-5xl text-center mx-auto my-auto bg-gradient-to-r from-green-400 to-blue-500">
-                     Welcome to the Movies List
-                     <h3 class="full:container mx-10 my-20 text-2xl text-center">Welcome all movie buffs! Do you have a passionate interest
+       <header class="md:container bg-clip-text font-extrabold bg-gradient-to-b from-green-400 to-blue-500 text-5xl text-transparent text-center">
+              <span> Welcome to the <br> Movies List </span>
+       </header>
+
+       <section class="bg-gradient-to-t from-green-400 to-blue-500 p-2">
+              <p class="container mx-8 my-8 text-center font-serif font-bold">Welcome all movie buffs! Do you have a passionate interest
                      in cinema and giphys? You've come to the right place! Search your favorite movies and our
                      application database will obtain movie information and generate a short looping of the movie- a
-                     giphy to match it! Enjoy!</h3>
-       </header>
-       <nav class="navbar navbar-light bg-white justify-content-center">
+                     giphy to match it! Enjoy!</p>
+       </section>
+
+       <nav class="navbar navbar-light bg-light justify-content-center">
+         
               <form class="form-inline">
                      <input class="bg-gray-200 focus:bg-white mx-4 my-4" id="movieName"
                             placeholder="Search Movie Title"></input>
                      <button class="btn btn-outline-success" type="button" id="searchMovie"
                             type="submit">Search</button>
               </form>
+
        </nav>
 
        <section class="md:h-full flex items-center text-gray-600">
 
               <div class="container px-5 py-24 mx-auto">
 
+                     <div class="container bg-green-300 box-border p-15 border-4 ...">
+                            <img class="object-contain h-48 w-full ..." src="./images/1621476110_100209_gif-url.gif" id="movieGif">
+                            <div class="flex flex-wrap -m-4">
 
-
-                     <div class="flex flex-wrap -m-4">
-
-                            <div class="p-8 mx-auto lg:w-screen lg:h-screen">
-                                   <div
-                                          class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                                          <img src="images/1621476110_100209_gif-url.gif" alt="image"
-                                                 class="lg:h-5/6 lg:h-48 w-screen object-cover object-center"
-                                                 id="movieGif">
                                           <div
-                                                 class="p-6 hover:bg-blue-400 hover:text-white transition duration-300 ease-in">
+                                                 class="p-6  mx-auto hover:bg-blue-400 hover:text-white transition duration-300 ease-in">
                                                  <h1 class="text-2xl text-center font-semibold mb-3" id="movieTitle">
                                                  </h1>
                                                  <p class="leading-relaxed text-center mb-3" id="movieYear"></p>
                                                  <p class="leading-relaxed text-center mb-3" id="moviePeople"></p>
-                                                 
+                                                 <div class="flex items-center flex-wrap">
+                                                 </div>
                                           </div>
-
                                    </div>
-                                   <div id="movieStorage"class="flex items-center flex-wrap empty">
-
-                                   </div>
-                            </div>
-
-                            <div class="bg-gray-400 flex items-center flex-wrap">
 
                             </div>
-
                      </div>
-              </div>
 
               </div>
-
+                            </div>
               </div>
 
+       </section>
+
+       <section> 
+              <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded justify-center" onclick="location.reload();">
+                     Refresh Page
+                   </button>
        </section>
 
        <footer>
@@ -164,4 +163,5 @@
               integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
        <script src="./Assets/script.js"></script>
 </body>
+
 </html>
