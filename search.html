@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+       <meta name="Description" content="Enter your description here" />
+       <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+       <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <title>Find Information About Your Movie</title>
+</head>
+
+<body class="bg-gray-300">
+
+       <header
+              class="md:container bg-clip-text font-extrabold bg-gradient-to-b from-green-400 to-blue-500 text-5xl text-transparent text-center">
+              Welcome to the Movies List
+       </header>
+
+       <div class="bg-gradient-to-t from-green-400 to-blue-500">
+              <h1 class="md:container mx-8 my-8 text-center text-2xl"> About our App</h1>
+              <p class="md:container mx-8 my-8 text-center">Welcome all movie buffs! Do you have a passionate interest in cinema and giphys? You’ve come to the right place! Search your favorite movies and our application database will obtain movie information and generate a short looping of the movie- a giphy to match it! Enjoy!</p>
+       </div>
+
+       <nav class="navbar navbar-light bg-light justify-content-center">
+              <form class="form-inline">
+                     <input class="bg-gray-200 focus:bg-white mx-4 my-4" id="movieName"
+                            placeholder="Search Movie Title"></input>
+              <button class="btn btn-outline-success" type="button" id="searchMovie"
+                            type="submit">Search</button>
+       </form>
+</nav>
+
+<section class="md:h-full flex items-center text-gray-600">
+
+       <div class="container px-5 py-24 mx-auto">
+
+
+
+              <div class="flex flex-wrap -m-4">
+
+                            <div class="p-8 mx-auto lg:w-screen lg:h-screen">
+                                   <div
+                                          class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                                          <img src="images/1621476110_100209_gif-url.gif" alt="image"
+                                                 class="lg:h-5/6 lg:h-48 w-screen object-cover object-center"
+                                                 id="movieGif">
+                                          <div
+                                                 class="p-6 hover:bg-blue-400 hover:text-white transition duration-300 ease-in">
+                                                 <h1 class="text-2xl text-center font-semibold mb-3" id="movieTitle">
+                                                 </h1>
+                                                 <p class="leading-relaxed text-center mb-3" id="movieYear"></p>
+                                                 <p class="leading-relaxed text-center mb-3" id="moviePeople"></p>
+                                                 <div class="flex items-center flex-wrap">
+
+                                                 </div>
+                                          </div>
+
+                                   </div>
+                            </div>
+
+                            </div>
+                     </div>
+
+              </div>
+
+       </div>
+
+</section>
+
+       <footer>
+              <div class="p-10 bg-gradient-to-r from-green-400 to-blue-500 text-gray-800">
+                     <div class="max-w-7xl mx-2">
+                            <div class="grid grid-row-1 md:grid-cols-2 md:grid-cols-4 gap-2 text-sm">
+                                   <div class="mb-5">
+                                          <h4 class="text-2xl pb-2">Company</h4>
+                                          <p class="text-gray-800">
+                                                 address goes here <br>
+                                                 1234, street ave <br>
+                                                 yada yada WA 12345 <br><br>
+                                                 <strong>Phone:</strong>+1 234 567 8912<br>
+                                                 <strong>Email:</strong>info@exapmle.com<br>
+                                          </p>
+                                   </div>
+                                   <div class="mb-5">
+                                          <h4 class="text-2xl pb-2">Links:</h4>
+                                          <ul class="text-gray-800">
+                                                 <li class="pb-2"><a href="./landing_page.html" class="hover:text-white">Home</a>
+                                                 </li>
+                                                 <li class="pb-2"><a href="#" class="hover:text-white">About Us</a>
+                                                 </li>
+                                                 <li class="pb-2"><a href="#" class="hover:text-white">Services</a>
+                                                 </li>
+                                          </ul>
+                                   </div>
+                                   <div class="mb-5">
+                                          <h4 class="text-2xl pb-2">Our Services:</h4>
+                                          <ul class="text-gray-800">
+                                                 <li class="pb-2"><a href="#" class="hover:text-white">Web
+                                                               Design</a></li>
+                                                 <li class="pb-2"><a href="#" class="hover:text-white">Web
+                                                               development</a></li>
+                                                 <li class="pb-2"><a href="#" class="hover:text-white">Marketing</a>
+                                                 </li>
+                                          </ul>
+                                   </div>
+                                   <div class="mb-5">
+                                          <h4 class="text-2xl pb-2">Join Our Newsletter:</h4>
+                                          <p class="text-gray-600 pb-2">Lorem ipsum dolor sit amet, consectetur</p>
+                                          <form class="flex flex-row flex-wrap">
+                                                 <input type="text"
+                                                        class="text-gray-600 w-2/3 p-2 focus:border-yellow-500"
+                                                        placeholder="email@example.com">
+                                                 <button
+                                                        class="p-2 w-1/3 bg-green-400 text-black hover:bg-blue-500">Subscribe</button>
+                                          </form>
+                                   </div>
+                            </div>
+                     </div>
+              </div>
+              <div class="w-full bg-gray-900 text-gray-500 px-10">
+                     <div class="max-w-7xl flex flex-col sm:flex-row py-4 mx-auto justify-between items-center">
+                            <div class="text-center">
+                                   <div>
+                                          Copyright <strong><span>Company</span></strong>. All Rights Reserved
+                                   </div>
+                                   <div>
+                                          Designed with <a href="#" class="text-green-400">TailwindCss</a>
+                                   </div>
+                            </div>
+                            <div class="text-center text-xl text-white mb-2">
+                                   <a href="https://twitter.com/?lang=en"
+                                          class="w-10 h-10 rounded-full bg-green-400 hover:bg-white mx-1 inline-block pt-1"><i
+                                                 class="fa fa-twitter"></i></a>
+                                   <a href="https://www.instagram.com/"
+                                          class="w-10 h-10 rounded-full bg-green-400 hover:bg-white mx-1 inline-block pt-1"><i
+                                                 class="fa fa-instagram"></i></a>
+                                   <a href="https://www.facebook.com/"
+                                          class="w-10 h-10 rounded-full bg-green-400 hover:bg-white mx-1 inline-block pt-1"><i
+                                                 class="fa fa-facebook"></i></a>
+                                   <a href="https://www.skype.com/en/"
+                                          class="w-10 h-10 rounded-full bg-green-400 hover:bg-white mx-1 inline-block pt-1"><i
+                                                 class="fa fa-skype"></i></a>
+                                   <a href="https://www.linkedin.com/home"
+                                          class="w-10 h-10 rounded-full bg-green-400 hover:bg-white mx-1 inline-block pt-1"><i
+                                                 class="fa fa-linkedin"></i></a>
+
+                            </div>
+                     </div>
+              </div>
+       </footer>
+
+       <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+              integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+       <script src="./Assets/script.js"></script>
+</body>
+
+</html>
